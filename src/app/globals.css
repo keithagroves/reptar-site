@@ -1,6 +1,8 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --button-rounded-full: 72px;
+  --button-rounded-half: 8px;
 }
 
 @media (prefers-color-scheme: dark) {
