@@ -6,6 +6,9 @@
   --button-primary-hover: #383838;
   --button-secondary-hover: #f2f2f2;
 
+  background: radial-gradient(#111111, #ffffff);
+}
+.hero {
   display: grid;
   grid-template-rows: 20px 1fr 20px;
   align-items: center;
@@ -70,12 +73,46 @@
   grid-row-start: 2;
   font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
+.navbar a{
+  cursor: pointer;
+}
 .navbar ul{
   display: flex;
   gap: 2rem;
 }
 .navbar ul li{
   list-style: none;
+  cursor: pointer;
+  filter: invert();
+}
+.navbar ul li:hover{
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.input {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  gap: 2rem;
+}
+.userinput {
+  font-family: monospace;
+  padding: 12px;
+  border-radius: var(--button-rounded-full);
+  letter-spacing: 2px;
+}
+.generatebutton {
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: large;
+  padding: 12px;
+  border-radius: var(--button-rounded-full);
+  cursor: pointer;
+  background: var(--foreground);
+  color: var(--background);
+}
+.generatebutton:hover{
+  background: var(--button-primary-hover);
+  border-color: transparent;
 }
 
 .ctas {
@@ -159,9 +196,36 @@ a.secondary {
   .main {
     align-items: center;
   }
-
   .main ol {
     text-align: center;
+  }
+  .main h1{
+    font-size: 3rem;
+    text-align: center;
+  }
+
+  .navbar {
+    padding: 0 50 0 0;
+    gap: 0;
+    width: 100vw;
+  }
+  
+  .hero{
+    padding: 0;
+    padding-bottom: 20vh;
+  }
+  
+  .input {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+  }
+  .userinput {
+    width: 100%;
+  }
+  .generatebutton {
+    width: 50%;
   }
 
   .ctas {
@@ -189,19 +253,4 @@ a.secondary {
   .logo {
     filter: invert();
   }
-}
-
-.input {
-  display: grid;
-  grid-template-columns: 3fr 1fr;
-  gap: 2rem;
-}
-.userinput {
-  font-family: monospace;
-  padding: 12px;
-  border-radius: var(--button-rounded-full);
-}
-.generatebutton {
-  padding: 12px;
-  border-radius: var(--button-rounded-full);
 }

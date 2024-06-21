@@ -3,15 +3,15 @@ import styles from "./page.module.css";
 
 export default function Home() {
   return (
-    <>
-    <div className={styles.navbar}>
-        <div className="logo"><a>reptar.ai</a></div>
-          <ul>
-            <li>About</li>
-            <li>Contact</li>
-          </ul>
-    </div>
     <div className={styles.page}>
+      <div className={styles.navbar}>
+          <div className={styles.logo}><a>reptar.ai</a></div>
+            <ul>
+              <li>About</li>
+              <li>Contact</li>
+            </ul>
+      </div>
+      <div className={styles.hero}>
       <main className={styles.main}>
         <h1>Create Business Avatar</h1>
         <div className={styles.input}>
@@ -23,6 +23,6 @@ export default function Home() {
   
       </footer>
     </div>
-    </>
+    </div>
   );
 }
