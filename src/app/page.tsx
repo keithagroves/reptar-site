@@ -4,7 +4,7 @@ import styles from "./page.module.css";
 export default function Home() {
   return (
     <div className={styles.page}>
-      <div className={styles.navbar}>
+      <div className={styles.nav}>
           <div className={styles.logo}><a>reptar.ai</a></div>
             <ul>
               <li>About</li>
@@ -12,17 +12,17 @@ export default function Home() {
             </ul>
       </div>
       <div className={styles.hero}>
-      <main className={styles.main}>
-        <h1>Create Business Avatar</h1>
-        <div className={styles.input}>
-          <input type="text" placeholder="Insert website link" className={styles.userinput}></input>
-          <button className={styles.generatebutton}>Generate Avatar</button>
-        </div>
-      </main>
+        <main className={styles.main}>
+          <h1>Create Business Avatar</h1>
+          <div className={styles.input}>
+            <input type="text" placeholder="Insert website link" className={styles.userinput}></input>
+            <button className={styles.generatebutton}>Generate Avatar</button>
+          </div>
+        </main>
+      </div>
       <footer className={styles.footer}>
-  
+        <p>© 2024 Reptar</p>
       </footer>
-    </div>
     </div>
   );
 }

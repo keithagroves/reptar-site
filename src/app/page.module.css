@@ -7,7 +7,9 @@
   --button-secondary-hover: #f2f2f2;
 
   background: radial-gradient(#111111, #ffffff);
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
+
 .hero {
   display: grid;
   grid-template-rows: 20px 1fr 20px;
@@ -63,7 +65,8 @@
   font-weight: 600;
 }
 
-.navbar {
+.nav {
+  z-index: 999;
   padding: 80px 80px 0px 80px;
   position: fixed;
   display: flex;
@@ -73,19 +76,19 @@
   grid-row-start: 2;
   font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
-.navbar a{
+.nav a{
   cursor: pointer;
 }
-.navbar ul{
+.nav ul{
   display: flex;
   gap: 2rem;
 }
-.navbar ul li{
+.nav ul li{
   list-style: none;
   cursor: pointer;
   filter: invert();
 }
-.navbar ul li:hover{
+.nav ul li:hover{
   text-decoration: underline;
   text-underline-offset: 4px;
 }
@@ -153,10 +156,11 @@ a.secondary {
 }
 
 .footer {
-  font-family: monospace;
   grid-row-start: 3;
   display: flex;
   gap: 24px;
+  background: #111111;
+  padding: 80px 80px 80px 80px;
 }
 
 .footer a {
@@ -204,7 +208,7 @@ a.secondary {
     text-align: center;
   }
 
-  .navbar {
+  .nav {
     padding: 0 50 0 0;
     gap: 0;
     width: 100vw;
@@ -212,7 +216,7 @@ a.secondary {
   
   .hero{
     padding: 0;
-    padding-bottom: 20vh;
+    padding-bottom: 15vh;
   }
   
   .input {
@@ -243,9 +247,10 @@ a.secondary {
   }
 
   .footer {
-    flex-wrap: wrap;
+    padding: 0;
     align-items: center;
     justify-content: center;
+    background: none;
   }
 }
 
